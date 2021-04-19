@@ -7,6 +7,8 @@ if !empty(glob('~/.vim/plugged/ale/autoload/ale.vim'))
 	let g:ale_disable_lsp = 1
 endif
 
+map <F5> :setlocal spell!<CR>
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
@@ -21,8 +23,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'fisadev/vim-isort'
 Plug 'jiangmiao/auto-pairs'
+Plug 'davidhalter/jedi-vim'
 "Plug 'tmhedberg/SimpylFold'
-"Plug 'davidhalter/jedi-vim'
 "Plug 'Vimjas/vim-python-pep8-indent'
 "Plug 'liuchengxu/vista.vim'
 "Plug 'tpope/vim-sensible'
@@ -53,7 +55,7 @@ filetype plugin on
 set laststatus=2
 
 " Ativable use of the mouse for all modes
-set mouse=a
+set mouse-=a
 
 "##################################################################
 
