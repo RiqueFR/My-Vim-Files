@@ -1,3 +1,6 @@
 {
-	"diagnostic.displayByAle": true
+	"diagnostic.displayByAle": true,
+
+	//snippets
+	"snippets.userSnippetsDirectory": "~/.vim/snips"
 }
