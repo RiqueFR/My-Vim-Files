@@ -70,3 +70,19 @@ if !empty(glob('~/.vim/plug-config/onedark.vim'))
 	source $HOME/.vim/plug-config/onedark.vim
 	colorscheme onedark
 endif
+
+let g:ale_linters = {
+\ 	'python': ['pylint'],
+\ 	'javascrip': ['eslint'],
+\}
+
+let g:ale_fixers = {
+\ 	'*': [],
+\ 	'python': ['black'],
+\ 	'javascrip': ['prettier'],
+\}
+
+let g:ale_fix_on_save = 1
+
+let g:vim_isort_map = '<C-i>'
+map <C-i> :Isort<CR>
