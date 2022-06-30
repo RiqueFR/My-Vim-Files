@@ -22,7 +22,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'fisadev/vim-isort'
 Plug 'jiangmiao/auto-pairs'
 Plug 'davidhalter/jedi-vim'
-"Plug 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 "Plug 'Vimjas/vim-python-pep8-indent'
 "Plug 'liuchengxu/vista.vim'
 "Plug 'tpope/vim-sensible'
@@ -60,6 +60,11 @@ set mouse-=a
 "########################################################################
 " Pluggins specific configs
 
+" map ctrl-/ to toggle comment on selected line
+if has_key(plugs, "nerdcommenter")
+	map <C-_> <plug>NERDCommenterToggle
+endif
+
 " ale setup
 if !empty(glob('~/.vim/plugged/ale/autoload/ale.vim'))
 	let g:ale_disable_lsp = 1
@@ -88,6 +93,7 @@ endif
 if !empty(glob('~/.vim/plug-config/nerdtree.vim'))
 	source $HOME/.vim/plug-config/nerdtree.vim
 endif
+
 if !empty(glob('~/.vim/plug-config/onedark.vim'))
 	source $HOME/.vim/plug-config/onedark.vim
 	colorscheme onedark
