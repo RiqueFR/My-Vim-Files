@@ -89,6 +89,21 @@ endif
 " import my plugins configs if they exist
 if !empty(glob('~/.vim/plug-config/coc.vim'))
 	source $HOME/.vim/plug-config/coc.vim
+	let g:coc_global_extensions = [
+				\"coc-clangd",
+				\"coc-cmake",
+				\"coc-css",
+				\"coc-eslint",
+				\"coc-highlight",
+				\"coc-html",
+				\"coc-htmldjango",
+				\"coc-java",
+				\"coc-json",
+				\"coc-markdownlint",
+				\"coc-python",
+				\"coc-snippets",
+				\"coc-tsserver"
+	\]
 endif
 if !empty(glob('~/.vim/plug-config/nerdtree.vim'))
 	source $HOME/.vim/plug-config/nerdtree.vim
